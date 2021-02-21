@@ -21,6 +21,7 @@ func init() {
 }
 
 func main() {
+	var response bytes.Buffer
 	john := person{"John Doe", 24}
 	if err := tmpl.Execute(&response, john); err != nil {
 		log.Fatal(err)

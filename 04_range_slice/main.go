@@ -9,13 +9,13 @@ import (
 )
 
 var tmpl *template.Template
-var response bytes.Buffer
 
 func init() {
 	tmpl = template.Must(template.ParseFiles("tmpl.gohtml"))
 }
 
 func main() {
+	var response bytes.Buffer
 	names := []string{"John Doe", "John Cena", "Harry Potter"}
 	if err := tmpl.Execute(&response, names); err != nil {
 		log.Fatal(err)

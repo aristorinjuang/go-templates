@@ -15,7 +15,6 @@ func fibonacci(number int) int {
 }
 
 var tmpl *template.Template
-var response bytes.Buffer
 
 var functions = template.FuncMap{
 	"title":     strings.Title,
@@ -27,6 +26,7 @@ func init() {
 }
 
 func main() {
+	var response bytes.Buffer
 	data := struct {
 		Names   []string
 		Numbers []int

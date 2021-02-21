@@ -18,7 +18,6 @@ func two(number int) int {
 }
 
 var tmpl *template.Template
-var response bytes.Buffer
 
 var functions = template.FuncMap{
 	"one": one,
@@ -30,6 +29,7 @@ func init() {
 }
 
 func main() {
+	var response bytes.Buffer
 	if err := tmpl.Execute(&response, 7); err != nil {
 		log.Fatal(err)
 	}

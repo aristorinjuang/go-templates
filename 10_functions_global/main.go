@@ -9,13 +9,13 @@ import (
 )
 
 var tmpl *template.Template
-var response bytes.Buffer
 
 func init() {
 	tmpl = template.Must(template.ParseFiles("tmpl.gohtml"))
 }
 
 func main() {
+	var response bytes.Buffer
 	data := struct {
 		Numbers []int
 		Arg1    int

@@ -9,13 +9,13 @@ import (
 )
 
 var tmpl *template.Template
-var response bytes.Buffer
 
 func init() {
 	tmpl = template.Must(template.ParseFiles("hello.gohtml"))
 }
 
 func main() {
+	var response bytes.Buffer
 	if err := tmpl.Execute(&response, `<script>alert("Hello World!")</script>`); err != nil {
 		log.Fatal(err)
 	}
