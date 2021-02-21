@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Global Functions</title>
+</head>
+<body>
+<h1>Global Functions</h1>
+<ul>
+    <li>{{index .Numbers 2}}</li>
+    <li>{{index .Numbers 1}}</li>
+    <li>{{index .Numbers 0}}</li>
+</ul>
+<p>Length: {{len .Numbers}}</p>
+<p>Raw: {{print .Numbers}}</p>
+<h2>Conditions</h2>
+{{if lt .Arg1 .Arg2}}
+<p>{{.Arg1}} is less than {{.Arg2}}.</p>
+{{end}}
+{{if gt .Arg2 .Arg1}}
+<p>{{.Arg2}} is greater than {{.Arg1}}.</p>
+{{end}}
+{{if eq .Arg1 .Arg3}}
+<p>{{.Arg1}} is equal to {{.Arg3}}.</p>
+{{end}}
+</body>
+</html>

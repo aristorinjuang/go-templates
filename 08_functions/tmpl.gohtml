@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+<h1>Functions</h1>
+<h2>Title</h2>
+<ol>
+    {{range .Names}}
+    <li>{{title .}}</li>
+    {{end}}
+</ol>
+<h2>Fibonacci</h2>
+<ul>
+    {{range .Numbers}}
+    <li>{{.}}: {{fibonacci .}}</li>
+    {{end}}
+</ul>
+</body>
+</html>

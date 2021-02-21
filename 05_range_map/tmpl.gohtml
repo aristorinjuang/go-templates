@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Range - Map</title>
+</head>
+<body>
+<h1>Range - Map</h1>
+<ul>
+    {{range $key, $val := .}}
+    <li>{{$key}}: {{$val}}</li>
+    {{end}}
+</ul>
+</body>
+</html>

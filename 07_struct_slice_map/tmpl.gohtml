@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Struct - Slice - Map</title>
+</head>
+<body>
+<h1>Struct - Slice - Map</h1>
+<h2>Names</h2>
+<ol>
+    {{range .Names}}
+    <li>{{.}}</li>
+    {{end}}
+</ol>
+<h2>Jobs</h2>
+<ul>
+    {{range $key, $val := .Jobs}}
+    <li>{{$key}}: {{$val}}</li>
+    {{end}}
+</ul>
+</body>
+</html>
